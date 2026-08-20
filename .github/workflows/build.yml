@@ -7,13 +7,14 @@ jobs:
     - uses: actions/checkout@v4
     - name: Unzip
       run: unzip endpickaxe.zip
-    - uses: actions/setup-java@v4
+    - uses: actions/setup-java@v5
       with:
         java-version: '21'
         distribution: 'temurin'
+    - uses: gradle/actions/setup-gradle@v4
     - name: Build
-      run: cd endpickaxe && chmod +x gradlew && ./gradlew build
+      run: cd endpickaxe && gradle build
     - uses: actions/upload-artifact@v4
       with:
         name: endpickaxe-jar
-        path: endpickaxe/build/libs/*.jar
+        path: "endpickaxe/build/libs/*.jar"
