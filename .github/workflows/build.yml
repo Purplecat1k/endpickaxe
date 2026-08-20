@@ -4,15 +4,12 @@ on: [push]
 jobs:
   build:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: endpickaxe
 
     steps:
       - uses: actions/checkout@v4
 
       - name: Unzip
-        run: unzip ../endpickaxe.zip
+        run: unzip endpickaxe.zip
 
       - uses: actions/setup-java@v4
         with:
@@ -24,6 +21,7 @@ jobs:
           gradle-version: '8.8'
 
       - name: Fix settings.gradle
+        working-directory: endpickaxe
         run: |
           cat > pluginManagement.tmp <<'EOF'
           pluginManagement {
@@ -38,6 +36,7 @@ jobs:
           rm pluginManagement.tmp
 
       - name: Build
+        working-directory: endpickaxe
         run: ./gradlew build
 
       - uses: actions/upload-artifact@v4
