@@ -1,0 +1,13 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.endpickaxe.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "refmap": "endpickaxe.refmap.json",
+  "mixins": [
+    "EndPortalFrameBlockMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

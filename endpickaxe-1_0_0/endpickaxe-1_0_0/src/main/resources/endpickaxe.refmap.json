@@ -1,0 +1,14 @@
+{
+  "mappings": {
+    "com/endpickaxe/mixin/EndPortalFrameBlockMixin": {
+      "getDestroyProgress": "Lnet/minecraft/class_4970;method_9594(Lnet/minecraft/class_2680;Lnet/minecraft/class_1657;Lnet/minecraft/class_1922;Lnet/minecraft/class_2338;)F"
+    }
+  },
+  "data": {
+    "named:intermediary": {
+      "com/endpickaxe/mixin/EndPortalFrameBlockMixin": {
+        "getDestroyProgress": "Lnet/minecraft/class_4970;method_9594(Lnet/minecraft/class_2680;Lnet/minecraft/class_1657;Lnet/minecraft/class_1922;Lnet/minecraft/class_2338;)F"
+      }
+    }
+  }
+}

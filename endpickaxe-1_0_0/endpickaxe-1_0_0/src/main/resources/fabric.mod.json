@@ -1,0 +1,38 @@
+{
+	"schemaVersion": 1,
+	"id": "endpickaxe",
+	"version": "1.0.0",
+	"name": "End Pickaxe",
+	"description": "Adds an End Pickaxe that can break End Portal Frames. Found in End City and End Ship chests.",
+	"authors": [
+		"PurpleCat"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": ""
+	},
+	"license": "MIT",
+	"icon": "assets/endpickaxe/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.endpickaxe.EndPickaxeMod"
+		],
+		"client": [
+			"com.endpickaxe.client.EndPickaxeClient"
+		]
+	},
+	"mixins": [
+		"endpickaxe.mixins.json",
+		{
+			"config": "endpickaxe.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.16.0",
+		"minecraft": "~1.21.1",
+		"java": ">=21",
+		"fabric-api": "*"
+	}
+}
